@@ -2,8 +2,8 @@ package tool
 
 // Config represents the tool config
 type Config struct {
-	Vendor  []*VendorConfig `yaml:"vendor"`
-	Actions []*ActionConfig `yaml:"actions"`
+	Vendor    []*VendorConfig    `yaml:"vendor"`
+	Transform []*TransformConfig `yaml:"transform"`
 }
 
 // VendorConfig represents the vendor config
@@ -12,14 +12,14 @@ type VendorConfig struct {
 	Source []string `yaml:"source"`
 }
 
-// ActionConfig represents the action config
-type ActionConfig struct {
-	Name        string        `yaml:"name"`
-	Expressions []*ExprConfig `yaml:"expressions"`
+// TransformConfig represents the update config
+type TransformConfig struct {
+	Name  string        `yaml:"name"`
+	Rules []*RuleConfig `yaml:"rules"`
 }
 
-// ExprConfig represents an experesion
-type ExprConfig struct {
-	Syntax string `yaml:"syntax"`
+// RuleConfig represents an experesion
+type RuleConfig struct {
+	Regexp string `yaml:"regexp"`
 	Value  string `yaml:"value"`
 }
