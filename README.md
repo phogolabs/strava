@@ -1,7 +1,7 @@
 # Strava
 
 A command line tool based on
-[go-getter](https://github.com/hashicorp/go-getter/) from hasicorp. That allows
+[go-getter](https://github.com/hashicorp/go-getter/) from hashicorp. That allows
 downloading file by providing a configuration file.  
 
 
@@ -10,7 +10,7 @@ downloading file by providing a configuration file.
 You can download all source into the given vendor directories by running:
 
 ```bash
-$ strave vendor
+$ strava vendor
 ```
 
 An example of `strava.yaml`:
