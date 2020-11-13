@@ -31,4 +31,15 @@ vendor:
   source:
   - https://raw.githubusercontent.com/grpc-ecosystem/grpc-gateway/master/protoc-gen-openapiv2/options/annotations.proto
   - https://raw.githubusercontent.com/grpc-ecosystem/grpc-gateway/master/protoc-gen-openapiv2/options/openapiv2.proto
+
+transform:
+- name: sdk/publication.swagger.json
+  rules:
+  - regexp: cliche.publication.sdk.
+
+  - regexp: google.protobuf.Any
+    value: Any
+
+  - regexp: google.rpc.Status
+    value: Error
 ```
