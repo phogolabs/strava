@@ -19,7 +19,7 @@ brews:
 - github:
     owner: phogolabs
     name: homebrew-tap
-  name: prana
+  name: strava
   description: Vendoring made easy
   homepage: https://github.com/phogolabs/strava
   test: |
