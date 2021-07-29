@@ -1,6 +1,7 @@
 before:
   hooks:
     - go mod download
+
 builds:
 - main: ./cmd/strava/main.go
   env:
@@ -9,6 +10,7 @@ builds:
   - linux
   - darwin
   - windows
+
 changelog:
   sort: asc
   filters:
@@ -16,7 +18,7 @@ changelog:
     - '^docs:'
     - '^test:'
 brews:
-- github:
+- tap:
     owner: phogolabs
     name: homebrew-tap
   name: strava
